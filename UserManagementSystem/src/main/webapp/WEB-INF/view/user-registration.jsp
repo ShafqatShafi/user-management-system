@@ -8,12 +8,19 @@
 <meta charset="ISO-8859-1">
 <title>User Management System</title>
 <link rel="stylesheet" href="css/style.css" /> 
+<script type="text/javascript">
+function goBack() {
+    window.history.back()
+}
+</script>
 </head>
 <body>
 	<div class="header">
 		<h2>Welcome to User Management System</h2>
-		<h3>Return to home page:</h3>
-		 <a href="/">Home</a>
+		<div class="nav-bar">
+			<a href="/">Home</a> 
+			<button class="back-button" onclick="goBack()">back</button>
+		</div>
 	</div>
 	<hr>
 	<div class="body">

@@ -24,7 +24,7 @@ function goBack() {
 	</div>
 	<hr>
 	<div class="body">
-		<form:form method="post" action="/user-update" modelAttribute="user">		
+		<form:form method="post" action="/admin-user-update" modelAttribute="user">		
 			<form:hidden path="userId" />	
 			<form:hidden path="username" />
 			<table>

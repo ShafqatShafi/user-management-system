@@ -83,4 +83,12 @@ public class UserController {
 		String username = user.getUsername();
 		return "redirect:/user-dashboard/"+username;
 	}
+	
+	@GetMapping("/delete/{userId}")
+	public String deleteUser(@PathVariable long userId) {
+		userService.deleteUser(userId);
+		
+		return "redirect:/admin-dashboard";
+	}
+	
 }

@@ -27,36 +27,37 @@ function goBack() {
 		<div class="error">
 			<c:choose>
 			  <c:when test="${error==true}">
-			   	<p>Either Username or Password was invalid.</p>
-			  </c:when>
-			</c:choose>
-			
-			<c:choose>
-			  <c:when test="${approval==false}">
-			   	<p>Your account is sent for approval.</p>
-			  </c:when>
-			</c:choose>
-			
-			<c:choose>
-			  <c:when test="${approved==false}">
-			   	<p>Your account is not approved yet, you will recieve an aprroval email, once Admin approves your account.</p>
+			   	<p>A user already exists with this username, try a different username.</p>
 			  </c:when>
 			</c:choose>
 		</div>
-		<form:form method="post" action="/user-login" modelAttribute="user">			
-		<table>
-			<tr>
-				<td>Username:</td>
-				<td><form:input path="username"/></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><form:password path="password"/></td>
-			</tr>
-			<tr>
-				<td colspan="2"><form:input type="submit" path="" value="Login"/></td>
-			</tr>			
-		</table>
+		<form:form method="post" action="/admin-user-registration" modelAttribute="user">			
+			<table>
+				<tr>
+					<td>Username:</td>
+					<td><form:input path="username" required="required"/></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><form:password path="password" required="required"/></td>
+				</tr>
+				<tr>
+					<td>First Name:</td>
+					<td><form:input path="firstname" required="required"/></td>
+				</tr>			
+				<tr>
+					<td>Last Name:</td>
+					<td><form:input path="lastname" required="required"/></td>
+				</tr>	
+				<tr>
+					<td>email:</td>
+					<td><form:input path="email" required="required"/></td>
+				</tr>				
+				<tr>
+					<td colspan="2"><form:input type="submit" path="" value="Register"/></td>
+				</tr>	
+													
+			</table>
 		</form:form>
 	</div>
 	<hr>

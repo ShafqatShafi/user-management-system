@@ -13,33 +13,54 @@ body hr{
 .header{
 	border-radius: 5px;
 }
-.header h2, h3{
+.header h2{
 	text-align:center;
-	color:purple;
 }
-.header a{
-	left:44%;
-	margin-top:5px;
-	position:relative;
-	display:block;
+.header .nav-bar{
+	margin-left:20%;
+	margin-right:20%;
+}
+.header .nav-bar a{
+	display:inline-block;
 	text-decoration:none;
-	width:150px;
+	width:15%;
 	height:22px;
 	text-align:center;
+	padding-top:3px;
+	background-color: purple;
 	color:white;
-	border: 1px solid grey;
+	border: 1px solid purple;
 	border-radius: 15px;
-	background-color: grey;
+	cursor: pointer;		
+}
+.header .nav-bar .back-button{
+	float:right;
+	margin-right:10%;
+	width:15%;
+	height:26px;
+	text-align:center;
+	color:white;
+	border-radius: 15px;
+	cursor: pointer;		
+	background-color: green;
+	border: 1px solid green;
+}
+.body h3{
+	color:red;
 }
 .body{
 	margin-left:40%;
-	margin-right:40%;
+	margin-right:20%;
 }
 .body table{
-	
+	margin-left:-30%;
 }
 .body table tr td{
 	padding:15px;
+}
+.body form table{
+	margin-left:1%;
+	margin-right:40%;
 }
 .body form input[type="submit"]{
 	width:100%;
@@ -54,6 +75,17 @@ body hr{
 	display:block;
 	text-decoration:none;
 	width:150px;
+	text-align:center;
+	color:white;
+	border: 1px solid purple;
+	border-radius: 15px;
+	background-color: purple;	
+}
+.body .tbl-users tr td a{
+	display:block;
+	margin-bottom:5px;
+	text-decoration:none;
+	width:100px;
 	text-align:center;
 	color:white;
 	border: 1px solid grey;
